@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Zork I
+GenericName=Interactive Fiction
+Comment=Explore the Great Underground Empire
+Exec=/usr/games/zork1
+TryExec=/usr/games/zork1
+Icon=utilities-terminal
+Terminal=true
+Categories=Game;AdventureGame;
+Keywords=Zork;Infocom;Interactive Fiction;Text Adventure;
+StartupNotify=false

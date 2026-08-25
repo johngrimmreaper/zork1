@@ -1,0 +1,26 @@
+.TH ZORK1 6 "August 2026" "Zork I" "Games Manual"
+.SH NAME
+zork1 \- play Zork I: The Great Underground Empire
+.SH SYNOPSIS
+.B zork1
+.RI [ frotz-options ]
+.SH DESCRIPTION
+.B zork1
+starts Zork I using the Frotz Z-machine interpreter.
+The game is an interactive-fiction adventure controlled by typed commands.
+.PP
+The packaged story image is installed at
+.IR /usr/share/games/zork1/zork1.z3 .
+.SH OPTIONS
+Options are passed directly to
+.BR frotz (6)
+before the story-image argument.
+.SH FILES
+.TP
+.I /usr/share/games/zork1/zork1.z3
+Z-machine version 3 story image supplied by upstream.
+.SH SEE ALSO
+.BR frotz (6),
+.BR dfrotz (6)
+.SH HOMEPAGE
+https://github.com/historicalsource/zork1

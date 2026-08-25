@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	@test -s COMPILED/zork1.z3
+	@test "$$(od -An -tu1 -N1 COMPILED/zork1.z3 | tr -d ' ')" = 3
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	@test -s COMPILED/zork1.z3
+	@test "$$(od -An -tu1 -N1 COMPILED/zork1.z3 | tr -d ' ')" = 3
+endif
+
+override_dh_auto_install:
+	install -D -m 0644 COMPILED/zork1.z3 \
+		debian/zork1/usr/share/games/zork1/zork1.z3
+	install -D -m 0755 debian/zork1.launcher \
+		debian/zork1/usr/games/zork1
+	install -D -m 0644 debian/zork1.desktop \
+		debian/zork1/usr/share/applications/zork1.desktop
+	install -D -m 0644 debian/zork1.6 \
+		debian/zork1/usr/share/man/man6/zork1.6

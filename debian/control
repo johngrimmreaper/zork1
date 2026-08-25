@@ -1,0 +1,25 @@
+Source: zork1
+Section: games
+Priority: optional
+Maintainer: Reaper <JohnGrimmReaper@disroot.org>
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.4.1
+Rules-Requires-Root: no
+Homepage: https://github.com/historicalsource/zork1
+Vcs-Browser: https://github.com/johngrimmreaper/zork1/tree/debian/sid
+Vcs-Git: https://github.com/johngrimmreaper/zork1.git -b debian/sid
+
+Package: zork1
+Architecture: all
+Depends:
+ frotz,
+ ${misc:Depends},
+Description: classic interactive fiction adventure
+ Zork I: The Great Underground Empire is the first commercial installment of
+ Infocom's classic Zork interactive-fiction trilogy. The player explores the
+ Great Underground Empire by entering natural-language commands and solving
+ puzzles.
+ .
+ This package contains the MIT-licensed upstream Z-machine version 3 story
+ image and a launcher that runs it with the Frotz interpreter.
